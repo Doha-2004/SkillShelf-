@@ -21,8 +21,6 @@ export function safeRedirectPath(value, fallback = DEFAULT_RETURN_PATH) {
   return value
 }
 
-// "/login?returnTo=%2Fsaved": the login address that remembers where the user wanted to go.
-// An unsafe destination is simply left out.
 export function loginPathFor(returnTo) {
   const safe = safeRedirectPath(returnTo, null)
   return safe ? `/login?returnTo=${encodeURIComponent(safe)}` : '/login'

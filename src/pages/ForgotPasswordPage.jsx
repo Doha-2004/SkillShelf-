@@ -70,9 +70,13 @@ function ForgotPasswordPage() {
         <h1>Forgot your password?</h1>
         <p>Enter your email and we will send you a link to choose a new password.</p>
       </div>
-      {doneMessage ? (
+
+            {doneMessage ? (
         <div role="status" className="form">
           <p>{doneMessage}</p>
+          <p className="form-footer">
+            <Link to="/reset-token">I have a reset token</Link>
+          </p>
           <p className="form-footer">
             <Link to="/login">Back to sign in</Link>
           </p>

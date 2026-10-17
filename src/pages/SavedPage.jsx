@@ -11,7 +11,7 @@ import { useSaved } from '../saved/useSaved'
 function SavedPage() {
   const saved = useSaved()
   const { categories } = useCategories()
-  const [feedback, setFeedback] = useState(null) // { tone, text }
+  const [feedback, setFeedback] = useState(null) 
   useDocumentTitle('Saved articles – SkillShelf')
 
   const categoryNames = Object.fromEntries(categories.map((item) => [item.id, item.name]))

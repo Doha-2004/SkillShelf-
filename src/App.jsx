@@ -13,6 +13,7 @@ import LoginPage from './pages/LoginPage'
 import NotFoundPage from './pages/NotFoundPage'
 import ProfilePage from './pages/ProfilePage'
 import SavedPage from './pages/SavedPage'
+import ResetTokenPage from './pages/ResetTokenPage'
 
 // "/" is not a page of its own: it leads to the catalog. Old shared links such as
 // "/?search=react" keep their query string.
@@ -70,7 +71,8 @@ function App() {
                   }
                 />
                 <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-                <Route path="/reset-password" element={<ResetPasswordPage />} />
+                <Route path="/reset-token" element={<ResetTokenPage />} />
+                 <Route path="/reset-password" element={<ResetPasswordPage />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </main>

@@ -63,7 +63,7 @@ export async function request(path, { method = 'GET', query, body, token, signal
       url: buildUrl(path, query).toString(),
       method,
       headers,
-      data: body, // axios sends objects as JSON with the right Content-Type
+      data: body, 
       signal,
     })
   } catch (error) {
